@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -168,10 +169,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CdH-jd-bsG">
-                                <rect key="frame" x="158" y="392" width="75" height="35"/>
+                                <rect key="frame" x="77" y="389" width="241" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Create Motocycle">
+                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="ILe-PC-UyL" kind="presentation" modalPresentationStyle="fullScreen" id="HKy-Qm-WO6"/>
                                 </connections>
@@ -180,12 +184,14 @@
                         <viewLayoutGuide key="safeArea" id="DKw-YB-48N"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="settings " selectedImage="settings (1)" id="OCt-0q-jBQ"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings " selectedImage="settings (1)" id="OCt-0q-jBQ">
+                        <color key="badgeColor" systemColor="labelColor"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="MyH-qT-ChU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LPU-gN-0zD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2902" y="358"/>
+            <point key="canvasLocation" x="2901.5384615384614" y="357.58293838862556"/>
         </scene>
         <!--Create New Moto View Controller-->
         <scene sceneID="NZi-5t-Yba">
@@ -241,6 +247,7 @@
                                             <color key="titleColor" red="0.99607843139999996" green="0.78823529410000004" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="createIsClicked:" destination="ILe-PC-UyL" eventType="touchUpInside" id="mOf-he-dIz"/>
                                             <action selector="singUpButtonTapped:" destination="Qfq-Nw-XGo" eventType="touchUpInside" id="HEH-DU-4St"/>
                                         </connections>
                                     </button>
@@ -271,6 +278,8 @@
                     <navigationItem key="navigationItem" id="ZhF-Ii-Ipr"/>
                     <connections>
                         <outlet property="markeB" destination="O0t-6Z-b1G" id="gmi-fn-erg"/>
+                        <outlet property="modelTf" destination="Ya4-cV-JxS" id="Hed-cT-rTJ"/>
+                        <outlet property="yearTf" destination="x4p-an-kkl" id="Pjf-bj-Wzv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jw8-X0-bwj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -288,7 +297,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <tabBarItem key="tabBarItem" title=" General" image="helmet " selectedImage="helmet (2)" id="Xvc-dN-NWt" userLabel="General">
-                        <color key="badgeColor" red="0.93725490196078431" green="0.95294117647058818" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="badgeColor" red="0.039215686270000001" green="0.039215686270000001" blue="0.039215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                 </viewController>
@@ -304,10 +313,10 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3WF-Mo-O0P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="AccentColor"/>
                         <color key="tintColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.99607843139999996" green="0.78823529410000004" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="selectedImageTintColor" red="0.99607843139999996" green="0.78823529410000004" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="rN0-QC-SGO" kind="relationship" relationship="viewControllers" id="Z3p-Bh-8gI"/>
@@ -327,7 +336,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="JEe-9D-UQh">
-                                <rect key="frame" x="75" y="97" width="240" height="650.33333333333326"/>
+                                <rect key="frame" x="75" y="97" width="240" height="650.33333333333337"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qaa-um-0hV">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="70"/>
@@ -441,6 +450,12 @@
         <image name="helmet (2)" width="21.333333969116211" height="21.333333969116211"/>
         <image name="settings " width="21" height="21"/>
         <image name="settings (1)" width="21" height="21"/>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

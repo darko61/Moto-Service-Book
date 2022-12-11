@@ -22,6 +22,8 @@ class CreateNewMotoViewController: ViewController, UITableViewDelegate, UITableV
 
     @IBOutlet weak var markeB: UIButton!
     
+    @IBOutlet weak var yearTf: UITextField!
+    @IBOutlet weak var modelTf: UITextField!
     let transparentView = UIView()
         let tableView = UITableView()
         
@@ -38,6 +40,30 @@ class CreateNewMotoViewController: ViewController, UITableViewDelegate, UITableV
     }
     
     
+    @IBAction func createIsClicked(_ sender: Any) {
+        
+        if validateFields() == nil && markeB.currentTitle != "Marke"
+                {
+                    let db = Firestore.firestore()
+                    let uId = Auth.auth().currentUser!.uid
+                    db.collection("user").document(String(uId)).collection("Motocycle").addDocument(data: ["Marke" : self.markeB.currentTitle! , "Model" : self.modelTf.text! , "Year" : self.yearTf.text!]){ err in
+                        if err != nil {
+                            print("Error adding document")
+                        } else {
+                            self.markeB.setTitle("Marke", for: .normal)
+                            self.yearTf.text = ""
+                            self.modelTf.text = ""
+                            print("Document added ")
+                    }
+                                                                                        
+                }
+                }
+        else
+        {
+            print("Fill all fileds")
+        }
+
+    }
     @IBAction func makreBtnIsClicked(_ sender: Any) {
         dataSource = ["Ducati", "Honda" , "Yamaha" , "KTM", "Suzuki"]
         selectedBtn = markeB
@@ -88,6 +114,20 @@ class CreateNewMotoViewController: ViewController, UITableViewDelegate, UITableV
            selectedBtn.setTitle(dataSource[indexPath.row], for: .normal)
            removeTransparentView()
        }
+    
+    func validateFields() -> String?{
+            
+            if
+                modelTf.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+                yearTf.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
+                
+                return "Please fill all fields!"
+            }
+            else{
+                return nil
+
+            }
+        }
 
 
 
