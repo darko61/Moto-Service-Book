@@ -202,7 +202,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="FnG-IE-fdq">
-                                <rect key="frame" x="75" y="157" width="240" height="530.33333333333337"/>
+                                <rect key="frame" x="75" y="117" width="240" height="610.33333333333337"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0t-6Z-b1G">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="50"/>
@@ -251,14 +251,30 @@
                                             <action selector="singUpButtonTapped:" destination="Qfq-Nw-XGo" eventType="touchUpInside" id="HEH-DU-4St"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6r8-xS-3M3">
+                                        <rect key="frame" x="0.0" y="360" width="240" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="q09-zM-5Kg"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="zZu-vR-sX6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="0.99607843139999996" green="0.78823529410000004" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="createIsClicked:" destination="ILe-PC-UyL" eventType="touchUpInside" id="LWA-OD-VYb"/>
+                                            <action selector="singUpButtonTapped:" destination="Qfq-Nw-XGo" eventType="touchUpInside" id="XtR-CV-51J"/>
+                                            <segue destination="UIB-dG-AMS" kind="presentation" modalPresentationStyle="fullScreen" id="Vxw-bJ-x5m"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bag-dk-YVQ">
-                                        <rect key="frame" x="0.0" y="360" width="240" height="20.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="440" width="240" height="20.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1-3" translatesAutoresizingMaskIntoConstraints="NO" id="nFO-gd-msg">
-                                        <rect key="frame" x="0.0" y="410.33333333333337" width="240" height="120"/>
+                                        <rect key="frame" x="0.0" y="490.33333333333337" width="240" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="120" id="G5a-ia-y1Q"/>
                                             <constraint firstAttribute="width" constant="240" id="Rcv-do-vHm"/>
@@ -306,7 +322,7 @@
                                                     <constraint firstAttribute="height" constant="60" id="Rkp-eT-0ZU"/>
                                                     <constraint firstAttribute="width" constant="100" id="iUW-fQ-abA"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="10"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="13"/>
                                                 <color key="textColor" name="AccentColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -343,7 +359,7 @@
                                                     <constraint firstAttribute="height" constant="60" id="ZGm-A7-5Xm"/>
                                                     <constraint firstAttribute="width" constant="100" id="hGp-hH-Id3"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="10"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="13"/>
                                                 <color key="textColor" name="AccentColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -380,7 +396,7 @@
                                                     <constraint firstAttribute="height" constant="60" id="h9W-qh-MqA"/>
                                                     <constraint firstAttribute="width" constant="100" id="zJR-i4-O53"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="10"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="13"/>
                                                 <color key="textColor" name="AccentColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -417,7 +433,7 @@
                                                     <constraint firstAttribute="width" constant="100" id="Ai5-fZ-GeQ"/>
                                                     <constraint firstAttribute="height" constant="60" id="mqj-Ka-Ded"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="10"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="13"/>
                                                 <color key="textColor" name="AccentColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -454,7 +470,7 @@
                                                     <constraint firstAttribute="width" constant="100" id="4a0-Wp-5Or"/>
                                                     <constraint firstAttribute="height" constant="60" id="9XP-Kh-XmC"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="10"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="13"/>
                                                 <color key="textColor" name="AccentColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -491,7 +507,7 @@
                                                     <constraint firstAttribute="height" constant="60" id="SZo-i9-FsM"/>
                                                     <constraint firstAttribute="width" constant="100" id="Y5R-P4-7jM"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="10"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="13"/>
                                                 <color key="textColor" name="AccentColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -682,7 +698,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8DC-Lw-aqw"/>
+        <segue reference="oyo-VD-EWb"/>
+        <segue reference="Vxw-bJ-x5m"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.32156862749999998" green="0.3803921569" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
